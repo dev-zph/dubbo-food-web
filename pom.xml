@@ -46,9 +46,20 @@
 			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
 			<version>${alibaba.fastjson.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.5.4</version>
 		</dependency>
 
 		<!-- -->
@@ -97,11 +108,29 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.2</version>
 				<configuration>
-					<version>3.0</version>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 
+<profiles>
+		<profile>
+			<id>sit</id><!--测试环境使用的profile -->
+			<activation><!-- 默认激活本配置 -->
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<!-- sit 数据库配置 -->
+				<pom.jdbc.driverClassName>com.mysql.jdbc.Driver</pom.jdbc.driverClassName>
+				<pom.jdbc.url>jdbc:mysql://localhost:3306/out_food?characterEncoding=UTF-8</pom.jdbc.url>
+				<pom.jdbc.username>root</pom.jdbc.username>
+				<pom.jdbc.password>123456</pom.jdbc.password>
+				<!-- sit 数据库配置 -->
+				<!-- 测试perporties -->
+				<pom.food.testvalue>test</pom.food.testvalue>
+			</properties>
+		</profile>
+	</profiles>
+	
 </project>
