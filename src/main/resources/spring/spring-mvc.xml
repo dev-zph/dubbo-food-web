@@ -12,9 +12,14 @@
         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 
+<!--    <mvc:resources mapping="/swagger/**" location="/WEB-INF/swagger/"/>-->
+
     <!-- 扫描controller（controller层注入） -->
     <context:component-scan base-package="dubbo.out.food.controller"/>
 
+    <bean class="MySwaggerConfig" />
+
+    <mvc:default-servlet-handler />
     <!-- 激活mvc 注解模式，把URL映射到Controller  -->
     <mvc:annotation-driven />
 
