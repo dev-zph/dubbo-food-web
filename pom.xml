@@ -15,7 +15,7 @@
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <alibaba.fastjson.version>1.2.29</alibaba.fastjson.version>
+        <alibaba.fastjson.version>1.2.32</alibaba.fastjson.version>
         <spring.version>4.1.4.RELEASE</spring.version>
         <log4j.version>1.2.13</log4j.version>
         <junit.version>4.8.1</junit.version>
@@ -140,6 +140,8 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
             </plugin>
+
+
         </plugins>
     </build>
 
