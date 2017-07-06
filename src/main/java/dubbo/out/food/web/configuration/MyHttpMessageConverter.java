@@ -1,4 +1,4 @@
-package dubbo.out.food.configuration;
+package dubbo.out.food.web.configuration;
 
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;

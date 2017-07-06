@@ -19,7 +19,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableWebMvc
 @EnableSwagger2
 @Configuration
-@ComponentScan(basePackages ="dubbo.out.food.controller")
+@ComponentScan(basePackages ="dubbo.out.food.web.controller")
 public class MySwaggerConfig extends WebMvcConfigurationSupport {
 
 
@@ -27,7 +27,7 @@ public class MySwaggerConfig extends WebMvcConfigurationSupport {
     public Docket buildDocket(){
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(buildApiInf())
-                .select()       .apis(RequestHandlerSelectors.basePackage("dubbo.out.food.controller"))//controller路径
+                .select()       .apis(RequestHandlerSelectors.basePackage("dubbo.out.food.web.controller"))//controller路径
                 .paths(PathSelectors.any())
                 .build();
     }

@@ -1,7 +1,7 @@
 /**
  *
  */
-package dubbo.out.food.controller;
+package dubbo.out.food.web.controller;
 
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
